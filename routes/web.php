@@ -49,3 +49,6 @@ Route::get('entrar/{idade}', function($idade){
 });
 
 Route::get('/filmes', 'FilmesController@exibirTodos');
+Route::get('/filmes/{id}', 'FilmesController@exibirDetalhe');
+Route::get('/filme/adicionar', 'FilmesController@adicionarFilme');
+Route::post('/filme/adicionar', 'FilmesController@salvarFilme');
