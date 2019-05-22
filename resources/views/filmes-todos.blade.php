@@ -22,6 +22,8 @@
                     <a href="/filmes/{{ $filme->id }}">
                     {{ $filme->titleComRating() }}
                     </a>
+                    <a href="/filme/editar/{{ $filme->id }}" class="btn btn-sm btn-light">Editar</a>
+                    <a href="/filme/excluir/{{ $filme->id }}" class="btn btn-sm btn-secondary">Excluir</a>
                 </li>
             @endforeach
         </ul>
