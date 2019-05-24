@@ -13,4 +13,8 @@ class Genero extends Model
     {
         return $this->name .' (' . $this->ranking . ') ';
     }
+    
+    public function relacaoDeGeneroParaFilmes() {
+        return $this->hasMany(Filme::class, 'genre_id', 'id');
+    }
 }

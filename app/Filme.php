@@ -19,8 +19,8 @@ class Filme extends Model
         return $this->hasOne(Genero::class,'id', 'genre_id');
     }
 
-    public function atores()
+   /* public function atores()
     {
-        return $this->belongsToMany(Ator::class, 'actor_movie', 'actor_id', 'movie_id');
-    }
+        return $this->belongsToMany(Ator::class, 'actor_movie', 'actor_id', 'movie_id';
+    }*/
 }
