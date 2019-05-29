@@ -48,7 +48,8 @@ Route::get('entrar/{idade}', function($idade){
     }
 });
 
-Route::get('/filmes', 'FilmesController@exibirTodos');
+Route::get('/filmes', 'FilmesController@exibirTodos')->middleware(['auth', 'admin']);
+
 Route::get('/filmes/{id}', 'FilmesController@exibirDetalhe');
 
 Route::get('/filme/adicionar', 'FilmesController@adicionarFilme');
@@ -58,3 +59,7 @@ Route::get('filme/editar/{id}', 'FilmesController@editarFilme');
 Route::post('filme/editar/{id}', 'FilmesController@gravarFilme');
 
 Route::get('filme/excluir/{id}', 'FilmesController@excluirFilme');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
