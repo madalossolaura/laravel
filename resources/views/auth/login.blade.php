@@ -64,6 +64,9 @@
                                 @endif
                             </div>
                         </div>
+
+                        <a href="/auth/facebook" class="btn btn-primary">Facebook</a>
+
                     </form>
                 </div>
             </div>
