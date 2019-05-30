@@ -65,8 +65,12 @@ class LoginController extends Controller
         }
   
         $authUser = new User;
-        $authUser->name = $user->name;
-        $authUser->email = $user->name;
+        if (isset($user->name)) {
+          $authUser->name = $user->name;
+        } else {
+          $authUser->name= $user->email;
+        }
+        $authUser->email= $user->email;
         $authUser->provider = $provider;
         $authUser->provider_id = $user->id;
         $authUser->photo = $user->avatar;

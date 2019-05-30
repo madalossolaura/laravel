@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+
+                    <img src="{{ auth()->user()->photo }}">
                 </div>
             </div>
         </div>

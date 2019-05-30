@@ -70,7 +70,7 @@
                         </div>
 
                           <a href="/auth/facebook" class="btn btn-primary">Facebook</a>
-
+                          <a href="/auth/github" class="btn btn-primary">GitHub</a>  
                     </form>
                 </div>
             </div>
